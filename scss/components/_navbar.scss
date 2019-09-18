@@ -1,0 +1,26 @@
+// Styling for navbar
+#mainNav {
+  background-color: $secondary;
+  .navbar-brand {
+    color: $primary;
+    @include script-font;
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      color: darken($primary, 10%);
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: white;
+        margin: auto 0.5rem;
+        @include heading-font;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}

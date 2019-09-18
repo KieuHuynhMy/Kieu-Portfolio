@@ -1,0 +1,202 @@
+// @import "basic/variables.scss";
+// @import "basic/mixins.scss";
+// @import "basic/page.scss";
+// @import "components/navbar.scss";
+// @import "components/header.scss";
+
+$secondary: #002e66 !default;
+$primary: #fed136 !default;
+
+@mixin serif-font {
+  font-family: "Droid Serif";
+}
+@mixin script-font {
+  font-family: "Kaushan Script";
+}
+@mixin body-font {
+  font-family: "Roboto Slab";
+}
+@mixin heading-font {
+  font-family: "Montserrat";
+}
+
+// Global styling for this template
+body {
+  //overflow-x: hidden;
+  @include body-font;
+}
+
+p {
+  line-height: 1.75;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  @include heading-font;
+}
+
+.sec-heading {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+// Styling for navbar
+#mainNav {
+  background-color: $secondary;
+  .navbar-brand {
+    color: $primary;
+    @include script-font;
+    &:active,
+    &:focus,
+    &:hover {
+      color: darken($primary, 10%);
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: white;
+        margin: auto 0.5rem;
+        @include heading-font;
+        &:active,
+        &:focus,
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+// Styling for header
+header.masthead {
+  background-image: url("../img/bg-masthead.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  color: white;
+  text-align: center;
+  .intro-text {
+    padding-top: 20rem;
+    padding-bottom: 15rem;
+    .intro-heading {
+      @include serif-font;
+      font-size: 45px;
+    }
+    .intro-subheading {
+      @include heading-font;
+      font-size: 50px;
+    }
+    .button-social {
+      font-size: 50px;
+      a {
+        color: $primary;
+        &:focus,
+        &:hover {
+          color: darken($primary, 20%);
+        }
+      }
+    }
+  }
+}
+// Styling Skills
+.icon {
+  font-size: 40px;
+  .html5 {
+    color: #e34c26;
+  }
+  .css3 {
+    color: #264de4;
+  }
+  .sass {
+    color: #cc6699;
+  }
+  .gulp {
+    color: #db4446;
+  }
+  .javascript {
+    color: #f0db4f;
+  }
+  .node {
+    color: #3c873a;
+  }
+  .react {
+    color: #61dbfb;
+  }
+  .postgres {
+    color: #636466;
+  }
+  .skill-icon {
+    border: 2px solid #002e66;
+    text-align: center;
+  }
+}
+
+//Styling portfolio
+.portfolio {
+  .card {
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+  }
+  .card-over {
+    &:focus,
+    &:hover {
+      background-color: $primary;
+    }
+  }
+}
+
+// Styling About
+#about {
+  
+    background-color: #F5F5F5;
+}
+.timeline-circle {
+  border: 7px solid $secondary;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  text-align: center;
+  background: $primary;
+  line-height: 10rem;
+  color: $secondary;
+}
+.timeline-content {
+  ul {
+    li {
+      @include heading-font;
+    }
+  }
+}
+
+// Styling contact
+#contact {
+  @include body-font;
+  .contact {
+    i {
+      color: $primary;
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+    font-size: 20px;
+  }
+}
+
+// Styling footer
+footer {
+  background-color: $secondary;
+  padding: 25px;
+  color: white;
+  @include heading-font;
+  margin-top: 5rem;
+}
